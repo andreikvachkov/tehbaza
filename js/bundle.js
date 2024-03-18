@@ -3189,7 +3189,7 @@
     }
     //endregion
     //region Spectrum
-        window.addEventListener("resize", (function() {
+        document.addEventListener("DOMContentLoaded", (function() {
         if (window.innerWidth > 768) {
             document.querySelectorAll(".catalog__section-slider").forEach(((slider, index) => {
                 const swiper = new Swiper(slider, {
@@ -5035,7 +5035,7 @@
             }
         }), _default(techview), _default(branches);
     }
-    window.addEventListener("resize", (function() {
+    document.addEventListener("DOMContentLoaded", (function() {
         if (window.innerWidth > 768) {
             const compilationsSlider = document.querySelector(".catalog__compilations-slider");
             if (compilationsSlider) {
@@ -5088,7 +5088,7 @@
             bulletElement: "button"
         }
     });
-    window.addEventListener("resize", (function() {
+    document.addEventListener("DOMContentLoaded", (function() {
         if (window.innerWidth > 768) {
             const lizingSlider = document.querySelector(".product-lizing__slider");
             if (lizingSlider) {
@@ -5108,9 +5108,8 @@
             }
         }
     }));
-
     const noveltySlider = document.querySelector(".product-novelty__slider"), noventyPrevieFadeSliders = document.querySelectorAll(".product-novelty__fade");
-    noveltySlider && (window.addEventListener("resize", (function() {
+    noveltySlider && (document.addEventListener("DOMContentLoaded", (function() {
         if (window.innerWidth > 768) {
             const swiper = new Swiper(noveltySlider, {
                 slidesPerView: 4,
@@ -5144,8 +5143,20 @@
         });
     })));
 }();
+
+//# sourceMappingURL=bundle.js.map
+
 function toggleNav() {
-    var sidebar = document.getElementById("mobile-menu");
+    var sidebar;
+    if (window.innerWidth <= 768) {
+        sidebar = document.getElementById("mobile-menu");
+    } else {
+        sidebar = document.getElementById("desktop-menu");
+    }
     sidebar.classList.toggle('open');
-};
+
+    var body = document.querySelector('body');
+
+    body.classList.toggle('no-scroll');
+}
 //# sourceMappingURL=bundle.js.map

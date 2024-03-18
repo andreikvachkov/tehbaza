@@ -4636,26 +4636,64 @@ input:focus-visible {
 	text-decoration: underline;
 	color: #82bfe0;
 }
-.desctop-menu {
+
+.desktop-menu {
 	display: none;
 	height: 100%;
-	width: 300px;
+	width: 100%;
 	position: fixed;
 	z-index: 555;
 	top: 0;
-	right: -300px;
+	left: 0;
 	background: #363f49;
 	overflow-x: hidden;
 	transition: 0.5s;
-	padding-top: 42px;
-	padding-bottom: 42px;
 }
-.desctop-menu.open {
-	right: 0;
+.desktop-menu.open {
+	display: block;
 }
-
-
-
+.desktop-menu__content {
+	display: flex;
+	justify-content: space-between;
+	padding: 7.8125rem 6.25rem 4.8125rem 6.25rem;
+	gap: 1.25rem;
+}
+.desktop-menu .cancel {
+	position: absolute;
+	top: 2.8125rem;
+	right: 2.8125rem;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+.desktop-menu__item__name {
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
+	font-size: 2.25rem;
+	color: #fff;
+	padding-bottom: 3.8125rem;
+}
+.desktop-menu__menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.desktop-menu__menu li a {
+	font-family: "Inter", sans-serif;
+	font-weight: 400;
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	color: #fff;
+}
+.desktop-menu__menu li:not(:last-child) {
+	padding-bottom: 1.25rem;
+}
+.no-scroll {
+    overflow: hidden;
+}
 
 @media (max-width: 768px) {
 	.mobile-menu {
