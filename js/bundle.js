@@ -5009,9 +5009,9 @@
         // Stores the plugin directly in the original select
         select.customSelect = container.customSelect, container.customSelect;
     }
-    const valuesSlider = document.getElementById("catalog__range"), techview = document.getElementById("techview"), branches = document.getElementById("branches");
+    const valuesSlider = document.getElementById("catalog__range"), techview = document.getElementById("techview"), branches = document.getElementById("branches"), branches2 = document.getElementById("branches2");
     if (console.log(techview), valuesSlider && techview) {
-        const valuesForSlider = [ "0", "500т", "800т", "1,1м", "1,4м", "1,7м", "2м", "2,3м", "2,7м", "3м" ];
+        const valuesForSlider = [ "1м", "1,3м", "1,6м", "1,9м", "2,2м", "2,5м", "2,8м", "3,1м", "3,4м", "6м" ];
         var format = {
             to: function(value) {
                 return valuesForSlider[Math.round(value)];
@@ -5033,7 +5033,7 @@
                 mode: "steps",
                 format: format
             }
-        }), _default(techview), _default(branches);
+        }), _default(techview), _default(branches), _default(branches2);
     }
     document.addEventListener("DOMContentLoaded", (function() {
         if (window.innerWidth > 768) {

@@ -2916,8 +2916,8 @@ input:focus-visible {
 }
 .preview-products__body {
 	display: flex;
-    gap: 1.875rem;
-    justify-content: space-between;
+	gap: 1.875rem;
+	justify-content: space-between;
 }
 .preview-products__title {
 	margin: 0rem 0rem 5.9375rem 0rem;
@@ -4215,6 +4215,17 @@ input:focus-visible {
 	justify-content: space-between;
 	gap: 1.625rem;
 }
+.product-lizing__top__left ul {
+	padding-left: 20px;
+}
+.product-lizing__top__left ul a {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 1.125rem;
+	line-height: 156%;
+	color: #29323d;
+	text-decoration: none;
+}
 .product-lizing__title {
 	margin: 0;
 	display: flex;
@@ -4464,7 +4475,7 @@ input:focus-visible {
 .lizing__item-text {
 	font-family: "Inter", sans-serif;
 	font-weight: 500;
-	font-size: 1rem;
+	font-size: 1.125rem;
 	line-height: 125%;
 	text-align: justify;
 	color: #29323d;
@@ -4530,6 +4541,7 @@ input:focus-visible {
 	font-weight: 300;
 	line-height: 1.4;
 	margin: 1.25rem 0rem 0rem 0rem;
+	font-size: 1.125rem;
 }
 .partners-conditions__list-descr span {
 	font-weight: 700;
@@ -4566,7 +4578,7 @@ input:focus-visible {
 .lizing-advantages__elem li {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 500;
-	font-size: 1rem;
+	font-size: 1.125rem;
 	line-height: 156%;
 	text-align: justify;
 	color: #29323d;
@@ -4706,10 +4718,16 @@ input:focus-visible {
 	padding-bottom: 1.25rem;
 }
 .no-scroll {
-    overflow: hidden;
+	overflow: hidden;
+}
+.catalog__controls-row .customSelect:first-child {
+	display: none;
 }
 
 @media (max-width: 768px) {
+	.catalog__controls-row .customSelect:first-child {
+		display: block;
+	}
 	.mobile-menu {
 		display: block;
 	}
@@ -4972,6 +4990,7 @@ input:focus-visible {
 	}
 	.preview-products__body {
 		padding: 0 21px;
+		display: block;
 	}
 	.preview-products__table-body {
 		display: grid;
@@ -4982,6 +5001,9 @@ input:focus-visible {
 	}
 	.preview-products__table-td--last {
 		font-weight: 400;
+	}
+	.preview-products__body .preview-products__table:first-child {
+		margin: 0;
 	}
 	.preview-products__bottom {
 		display: flex;
