@@ -4234,6 +4234,9 @@ input:focus-visible {
 	margin-top: 4.375rem;
 	margin-left: -12.5rem;
 }
+.product-lizing__top__left .product-lizing__title {
+	color: #363f49;
+}
 .product-lizing__nav {
 	display: flex;
 	gap: 0.875rem;
